@@ -6,7 +6,7 @@ public class Evento {
 	private String local;
 	private String data;
 	private String horario;
-
+	
 	public String getNome() {
 		return nome;
 	}

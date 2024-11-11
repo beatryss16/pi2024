@@ -30,7 +30,7 @@
 			<tbody>
 				<tr th:each="e : ${eventos}">
 					<td th:text="${e.id}">1</td>
-					<td th:text="${e.nome}">Aniversario de Anna</td>
+					<td><a href="@{/eventos/{id}(id=${e.id})}"><span th:text="${e.nome}">Aniversario de Anna</span></a></td>
 					<td th:text="${e.local}">Escola</td>
 					<td th:text="${e.data}">05/12/2024</td>
 					<td th:text="${e.horario}">20:00</td>

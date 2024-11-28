@@ -20,6 +20,8 @@
 
 		<table class="highlight">
 
+	<p th:if="${mensagem}" th:text="${mensagem}"></p>
+
 			<thead>
 
 				<tr>
@@ -38,7 +40,7 @@
 					<td><a href="@{/eventos/{id}(id=${e.id})}"><span
 							th:text="${e.nome}">Aniversario de Anna</span></a></td>
 					<td th:text="${e.local}">Escola</td>
-					<td th:text="${e.data}">05/12/2024</td>
+					<td th:text="${#temporals.format(e.data)}">05/12/2024</td>
 					<td th:text="${e.horario}">20:00</td>
 					<td>
 					<a th:href="@{/eventos/{id}/selecionar(id=${e.id})}">><i class="material-icons">edit</i></a>
